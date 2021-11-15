@@ -1,0 +1,25 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  height: 120px;
+  width: 100vw;
+  background-color: #4056A1;
+  color: #FFFFFF;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+}
+
+#cta i {
+  display: block;
+  margin-left: 3.5em;
+  color: red;
+}
+
+#cta .bold {
+  font-weight: 600;
+}
+
+.nav-bar {
+  display: flex;
+  align-items: center;
+}
