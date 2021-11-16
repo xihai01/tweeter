@@ -1,0 +1,14 @@
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  height: 400px;
+  width: 100%;
+  background-color: #e9eba7;
+  background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+}
+
+header h2 {
+  margin: 0em;
+}

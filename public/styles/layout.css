@@ -25,6 +25,14 @@ body {
   font-family: 'Bungee', sans-serif;
 }
 
+.bold {
+  font-weight: 600;
+}
+
+.light {
+  font-weight: 300;
+}
+
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
