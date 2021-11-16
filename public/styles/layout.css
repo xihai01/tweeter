@@ -40,6 +40,16 @@ main {
   font-weight: 300;
 }
 
+.new-tweet label {
+  position: absolute;
+}
+
+#tweet-text {
+  width: 100%;
+  background-color: inherit;
+  resize: none;
+}
+
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
