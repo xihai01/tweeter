@@ -1,0 +1,53 @@
+article {
+  border: black;
+  border-width: medium;
+  border-style: solid;
+  padding-left: 1em;
+  padding-right: 1em;
+  margin-top: 2em;
+}
+
+article:hover {
+  box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+}
+
+.tweet-container {
+  background-color: #f4f1ec;
+  background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+}
+
+.tweet-container header {
+  flex-direction: row;
+  justify-content: space-between;
+  height: auto;
+  background-color: inherit;
+  background-image: inherit;
+}
+
+.tweet-container footer {
+  display: flex;
+  justify-content: space-between;
+  border-top-color: black;
+  border-top-style: solid;
+  border-top-width: medium;
+  margin-bottom: 1em;
+  padding-top: 1em;
+}
+
+.tweet-container footer .footer-icons i:nth-child(2) {
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+}
+
+.fa-solid:hover {
+  color: goldenrod;
+  cursor: pointer;
+}
+
+.tweet-container .profile-pic {
+  align-items: center;
+}
+
+.tweet-container .profile-pic img {
+  margin-right: 1em;
+}

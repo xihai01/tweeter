@@ -15,13 +15,3 @@ $(document).ready(function() {
     textLength ? label.css('display', 'none') : label.css('display', 'block');
   });
 });
-
-/* const text = document.getElementById('tweet-text');
-
-text.addEventListener('input', (event) => {
-  console.log(event.data);
-}); */
-
-/* Why are some of the event attributes in jQuery event listeners different from pure JS event listeners. (i.e some of the event object attributes return undefined in jQuery while they exist in pure JS).
-Status
-Your request is being  */
