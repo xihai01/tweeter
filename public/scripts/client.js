@@ -51,13 +51,20 @@ $(document).ready(function() {
     }
   };
 
+  //escapes HTML char - prevent XSS
+  const escape = function(str) {
+    let div = document.createElement('div');
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
+
   //parse the tweet data and return an aricle HTML element
   const createTweetElement = function(data) {
     //get user info from tweet data
     const name = data.user.name;
     const avatar = data.user.avatars;
     const handle = data.user.handle;
-    const content = data.content.text;
+    const content = escape(data.content.text);
     const timeStamp = timeago.format(data.created_at);
 
     //create the HTML element to hold tweet
