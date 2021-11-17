@@ -21,18 +21,23 @@ $(document).ready(function() {
     //serialize the value in text box into a query string
     const textArea = form.find('textarea');
     const queryString = textArea.serialize();
-    //send tweet to be saved in db
-    $.ajax('/tweets/', { method: 'POST', data: queryString });
+    //send tweet to be saved in db and then refresh page to show it
+    $.ajax('/tweets/', { method: 'POST', data: queryString })
+      .then(function() {
+        return loadTweets()
+      })
+      .then(function(data) {
+        //clear old tweets before rendering again - don't want duplicates
+        $('.tweet-container').empty();
+        renderTweets(data);
+      });
   });
 
   //use AJAX GET request to fetch tweets from /tweets
   //it has to handle a JSON request/response
   //upon success, render tweets
-  const loadTweets = function(callback) {
-    $.ajax('/tweets/', { method: 'GET', dataType: 'json' })
-      .then(function(data) {
-        callback(data);
-      });
+  const loadTweets = function() {
+    return $.ajax('/tweets/', { method: 'GET', dataType: 'json' });
   };
 
   //append each tweet stored in data to our HTML
@@ -60,5 +65,9 @@ $(document).ready(function() {
     return $tweet;
   };
 
-  loadTweets(renderTweets);
+  //load tweets for first time visit
+  loadTweets()
+    .then(function(data) {
+      renderTweets(data);
+    });
 });
