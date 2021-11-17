@@ -14,7 +14,7 @@ const tweetData = {
   "content": {
       "text": "If I have seen further it is by standing on the shoulders of giants"
     },
-  "created_at": 1461116232227
+  "created_at": 1637178244000
 }
 
 $(document).ready(function() {
@@ -25,7 +25,7 @@ $(document).ready(function() {
     const avatar = tweetData.user.avatars;
     const handle = tweetData.user.handle;
     const content = tweetData.content.text;
-    const timeStamp = tweetData.created_at;
+    const timeStamp = timeago.format(tweetData.created_at);
 
     //create the HTML element to hold tweet
     const header = `<header><div class="profile-pic"><img src=${avatar} />${name}</div><div>${handle}</div></header>`;
