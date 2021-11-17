@@ -8,6 +8,16 @@ $(document).ready(function() {
   const form = $('.new-tweet').find('form');
   form.submit(function(e) {
     e.preventDefault();
+    let text = $(e.target).find('textarea').val();
+    //form validation for empty string and max char length
+    if (text.trim() === '') {
+      alert('You cannot leave text area blank!');
+      return;
+    }
+    if (text.length > 140) {
+      alert('You haved exceeded 140 characters!');
+      return;
+    }
     //serialize the value in text box into a query string
     const textArea = form.find('textarea');
     const queryString = textArea.serialize();
@@ -30,7 +40,7 @@ $(document).ready(function() {
     let $tweet = '';
     for (const tweet of tweets) {
       $tweet = createTweetElement(tweet);
-      $('.tweet-container').append($tweet);
+      $('.tweet-container').prepend($tweet);
     }
   };
 
