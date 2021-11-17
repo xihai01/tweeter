@@ -31,6 +31,16 @@ const data = [
 ]
 
 $(document).ready(function() {
+  const form = $('.new-tweet').find('form');
+  form.submit(function(e) {
+    e.preventDefault();
+    //serialize the value in text box into a query string
+    const textArea = form.find('textarea');
+    const queryString = textArea.serialize();
+    //send tweet to be saved in db
+    $.ajax('/tweets/', { method: 'POST', data: queryString });
+  });
+
   //append each tweet stored in data to our HTML
   const renderTweets = function(tweets) {
     let $tweet = '';
