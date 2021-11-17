@@ -29,6 +29,8 @@ $(document).ready(function() {
       .then(function(data) {
         //clear old tweets before rendering again - don't want duplicates
         $('.tweet-container').empty();
+        $('#tweet-text').val('');
+        $('#tweet-text').parent().find('label').css('display', 'block');
         renderTweets(data);
       });
   });
@@ -65,7 +67,8 @@ $(document).ready(function() {
     return $tweet;
   };
 
-  //load tweets for first time visit
+  //load tweets and clear text area for first time visit
+  $('#tweet-text').val('');
   loadTweets()
     .then(function(data) {
       renderTweets(data);
