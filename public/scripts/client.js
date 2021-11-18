@@ -35,8 +35,10 @@ $(document).ready(function() {
       .then(function(data) {
         //do some cleaning up...
         //clear old tweets before rendering again - don't want duplicates
+        //reset counter back to 140
         $('.tweet-container').empty();
         $('#tweet-text').val('');
+        $('#tweet-text').parent().find('.counter').val(140);
         $('#tweet-text').parent().find('label').css('display', 'block');
         renderTweets(data);
       });
