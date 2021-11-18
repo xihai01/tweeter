@@ -9,15 +9,21 @@ $(document).ready(function() {
   form.submit(function(e) {
     e.preventDefault();
     let text = $(e.target).find('textarea').val();
+    $('.error-msg').slideUp();
     //form validation for empty string and max char length
     if (text.trim() === '') {
-      alert('You cannot leave text area blank!');
+      let msg = 'Please do not try submitting nothing..';
+      $('.error-msg').slideDown();
+      $('.error-msg').find('p').text(msg);
       return;
     }
     if (text.length > 140) {
-      alert('You haved exceeded 140 characters!');
+      let msg = "Bruh... Cut down on the text a little bit please. I ain't processing that lmao.";
+      $('.error-msg').slideDown();
+      $('.error-msg').find('p').text(msg);
       return;
     }
+    $('.error-msg').slideUp();
     //serialize the value in text box into a query string
     const textArea = form.find('textarea');
     const queryString = textArea.serialize();
@@ -27,6 +33,7 @@ $(document).ready(function() {
         return loadTweets()
       })
       .then(function(data) {
+        //do some cleaning up...
         //clear old tweets before rendering again - don't want duplicates
         $('.tweet-container').empty();
         $('#tweet-text').val('');
@@ -76,6 +83,7 @@ $(document).ready(function() {
 
   //load tweets and clear text area for first time visit
   $('#tweet-text').val('');
+  $('.error-msg').css('display', 'none');
   loadTweets()
     .then(function(data) {
       renderTweets(data);
