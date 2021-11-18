@@ -83,6 +83,26 @@ $(document).ready(function() {
     return $tweet;
   };
 
+  //show/hide input form when clicked
+  let isSelected = false;
+  $('nav').click(function(e) {
+    //only process click if correct area is clicked on nav
+    let target = e.target.closest('#form-toggle');
+    if (!target) {
+      return;
+    }
+    //slide the form up/down depending on state
+    if (!isSelected) {
+      $('.new-tweet').slideDown();
+      isSelected = true;
+      return;
+    } else {
+      $('.new-tweet').slideUp();
+      isSelected = false;
+      return;
+    }
+  });
+
   //load tweets and clear text area for first time visit
   $('#tweet-text').val('');
   $('.error-msg').css('display', 'none');

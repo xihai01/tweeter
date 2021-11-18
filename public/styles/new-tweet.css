@@ -1,3 +1,7 @@
+.new-tweet {
+  display: none;
+}
+
 .new-tweet label {
   position: absolute;
   cursor: text;
