@@ -40,6 +40,28 @@ main {
   font-weight: 300;
 }
 
+/* .word-wrap {
+  overflow-wrap: break-word;
+}
+ */
+/* Tablet and Desktop Styles */
+@media only screen and (min-width: 1024px) {
+  body {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-right: 10em;
+    margin-left: 10em;
+    padding-top: 5em;
+    padding-bottom: 5em;
+  }
+}
+
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */

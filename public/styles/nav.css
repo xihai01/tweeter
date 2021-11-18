@@ -25,3 +25,10 @@ nav {
   display: flex;
   align-items: center;
 }
+
+/* Tablet and Desktop Styles */
+@media only screen and (min-width: 1024px) {
+  nav {
+    top: 0;
+  }
+}

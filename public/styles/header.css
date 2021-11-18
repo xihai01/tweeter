@@ -12,3 +12,14 @@ header {
 header h2 {
   margin: 0em;
 }
+
+/* Tablet and Desktop Styles */
+@media only screen and (min-width: 1024px) {
+  #profile {
+    justify-content: center;
+    width: 50%;
+    height: 50%;
+    margin-top: 10em;
+    margin-left: 5em;
+  }
+}
