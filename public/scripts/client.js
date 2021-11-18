@@ -18,7 +18,7 @@ $(document).ready(function() {
       return;
     }
     if ((140 - text.length) < 0) {
-      let msg = "Bruh... Cut down on the text a little bit please. I ain't processing that lmao.";
+      let msg = "You are writing too much! Please keep tweets under limit.";
       $('.error-msg').slideDown();
       $('.error-msg').find('p').text(msg);
       return;
@@ -79,7 +79,7 @@ $(document).ready(function() {
     //create the HTML element to hold tweet
     const header = `<header><div class="profile-pic"><img src=${avatar} />${name}</div><div>${handle}</div></header>`;
     const footer = `<footer><time>${timeStamp}</time><span class="footer-icons"><i class="fa-solid fa-flag"></i><i class="fa-solid fa-heart"></i><i class="fa-solid fa-retweet"></i></footer>`;
-    const $tweet = $(`<article>${header}<p>${content}</p>${footer}</article>`);
+    const $tweet = $(`<article>${header}<p class="word-wrap">${content}</p>${footer}</article>`);
     return $tweet;
   };
 
