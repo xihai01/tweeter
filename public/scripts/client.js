@@ -17,7 +17,7 @@ $(document).ready(function() {
       $('.error-msg').find('p').text(msg);
       return;
     }
-    if (text.length > 140) {
+    if ((140 - text.length) < 0) {
       let msg = "Bruh... Cut down on the text a little bit please. I ain't processing that lmao.";
       $('.error-msg').slideDown();
       $('.error-msg').find('p').text(msg);
