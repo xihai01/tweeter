@@ -94,10 +94,13 @@ $(document).ready(function() {
     //slide the form up/down depending on state
     if (!isSelected) {
       $('.new-tweet').slideDown();
+      $('#tweet-text').focus();
       isSelected = true;
       return;
     } else {
+      //clear any error messages as form closes
       $('.new-tweet').slideUp();
+      $('.error-msg').css('display', 'none');
       isSelected = false;
       return;
     }
