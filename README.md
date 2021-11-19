@@ -23,7 +23,11 @@ The following tech stacks are used:
 3. Start the web server using the `npm start` command.
 4. The app will be served at <http://localhost:8080/>.
 
-## Screenshots
+## Tweeter Demo
+Homepage
+!["Tweeter Demo"](https://github.com/xihai01/tweeter/blob/master/docs/tweeter-demo.gif?raw=true)
+Mobile Page
+!["Tweeter Mobile Demo"](https://github.com/xihai01/tweeter/blob/master/docs/tweeter-mobile.gif?raw=true)
 
 ## Dependencies
     "body-parser": "^1.15.2",
