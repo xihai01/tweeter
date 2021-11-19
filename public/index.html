@@ -4,6 +4,9 @@
     <!-- Meta Information -->
     <title>Tweeter - Home Page</title>
 
+    <!-- Disable Viewport Zooming -->
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
+
     <!-- External CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
 
@@ -28,9 +31,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     <!-- App JS -->
+    <script type="text/javascript" src="/scripts/tweet-helpers.js"></script>
     <script type="text/javascript" src="/scripts/client.js"></script>
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
-    <script type="text/javascript" src="/scripts/composer.js"></script>
+    <script type="text/javascript" src="/scripts/scroll-to-top.js"></script>
   </head>
 
   <body>
@@ -75,6 +79,6 @@
       <section class="tweet-container"></section>
     </main>
     <!-- Scroll Button -->
-    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    <button id="myBtn" title="Go to top">Top</button>
   </body>
 </html>
