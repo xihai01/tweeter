@@ -44,6 +44,28 @@ main {
   overflow-wrap: anywhere;
 }
 
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: #ffa600;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 10px;
+  font-family: 'Source sans pro';
+  font-weight: 600;
+  font-size: 18px;
+}
+
+#myBtn:hover {
+  box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+}
+
 /* Tablet and Desktop Styles */
 @media only screen and (min-width: 1024px) {
   body {
